@@ -27,3 +27,4 @@ source /home/futuzor/.config/nvim/plugins.vim "Carga el archivo plugins.vim
 source /home/futuzor/.config/nvim/keys.vim "Carga el archivo keys.vim
 source /home/futuzor/.config/nvim/lsp.lua
 source /home/futuzor/.config/nvim/mason.lua
+source /home/futuzor/.config/nvim/luasnip.lua

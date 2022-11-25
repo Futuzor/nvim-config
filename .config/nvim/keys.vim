@@ -1,4 +1,5 @@
 let mapleader=','
+nnoremap <leader> :!echo "Acabas de pulsar la tecla LÍDER"<CR>
 
 ""Guarda el archivo actual
 nnoremap <silent> <C-s> :w<CR>
@@ -27,11 +28,16 @@ nnoremap <silent> bp :bprev<CR>
 ""------------
 
 ""Abre una nueva pestaña
-nnoremap <silent> <Leader>te :tabedit<CR>
+nnoremap <silent> <leader>te :tabedit<CR>
+
+""------------
+""  NETRW
+""------------
+nnoremap <silent> <leader>net :Vexplor<CR>
 
 ""-----------
 ""  PLUGINS
 ""-----------
 
-nnoremap <silent> pi :PlugInstall<CR>
-nnoremap <silent> ps :PlugStatus<CR>
+nnoremap <silent> <leader>pi :PlugInstall<CR>
+nnoremap <silent> <leader>ps :PlugStatus<CR>
