@@ -41,3 +41,17 @@ nnoremap <silent> <leader>net :Vexplor<CR>
 
 nnoremap <silent> <leader>pi :PlugInstall<CR>
 nnoremap <silent> <leader>ps :PlugStatus<CR>
+
+""-------------
+""  TELESCOPE
+""-------------
+
+nnoremap <silent> <leader>ff :Telescope find_files<CR>
+nnoremap <silent> <leader>fb :Telescope buffers<CR>
+nnoremap <silent> <leader>fh :Telescope help_tags<CR>
+
+""--------
+""  CODI
+""--------
+
+nnoremap <silent> <leader>cc :Codi!!<CR>

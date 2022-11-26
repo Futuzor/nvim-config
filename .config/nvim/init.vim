@@ -22,9 +22,18 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#capslock#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+let g:airline#extensions#nvimlsp#enabled = 1
 
-source /home/futuzor/.config/nvim/plugins.vim "Carga el archivo plugins.vim
-source /home/futuzor/.config/nvim/keys.vim "Carga el archivo keys.vim
-source /home/futuzor/.config/nvim/lsp.lua
-source /home/futuzor/.config/nvim/mason.lua
-source /home/futuzor/.config/nvim/luasnip.lua
+
+source ~/.config/nvim/plugins.vim "Carga el archivo plugins.vim
+source ~/.config/nvim/keys.vim "Carga el archivo keys.vim
+source ~/.config/nvim/lsp.lua
+source ~/.config/nvim/telescope.lua
+source ~/.config/nvim/mason.lua
+source ~/.config/nvim/luasnip.lua
+source ~/.config/nvim/netrw.vim
+source ~/.config/nvim/codiconf.vim
+
+colorscheme github_dark_colorblind
+set completeopt = "menu, menuone, noselect""
+

@@ -20,7 +20,6 @@ call plug#begin()
     Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'rafamadriz/friendly-snippets'
     Plug 'honza/vim-snippets'
-
     
     ""Telescope
     Plug 'nvim-telescope/telescope.nvim'
@@ -30,5 +29,9 @@ call plug#begin()
     Plug 'metakirby5/codi.vim'
 
     ""Iconos DEV
+    Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
+
+    ""Temas
+    Plug 'projekt0n/github-nvim-theme'
 call plug#end()
