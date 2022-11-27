@@ -34,4 +34,16 @@ call plug#begin()
 
     ""Temas
     Plug 'projekt0n/github-nvim-theme'
+
+    ""Gestor de archivos
+    Plug 'MunifTanjim/nui.nvim'
+    Plug 'nvim-neo-tree/neo-tree.nvim'
+
+    ""Formateador
+    Plug 'MunifTanjim/prettier.nvim'
+
+    ""Auto cerramiento
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'windwp/nvim-autopairs'
+    Plug 'windwp/nvim-ts-autotag'
 call plug#end()

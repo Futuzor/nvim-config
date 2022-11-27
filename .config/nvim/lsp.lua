@@ -39,21 +39,82 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 require('lspconfig')['pyright'].setup{
-    autostart = true,
+    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['vls'].setup{
-    autostart = true,
+require('lspconfig')['vimls'].setup{
+    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
 }
 require('lspconfig')['tsserver'].setup{
-    autostart = true,
+    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     root_dir = function() return vim.loop.cwd() end
+}
+require('lspconfig')['html'].setup{
+    --autostart = true,
+    on_attach = on_attach,
+    flags = lsp_flags,
+    filetypes = { "html" },
+    init_options = {
+        configurationSection = { "html", "css", "javascript" },
+        embeddedLanguages = {
+            css = true,
+        javascript = true
+        },
+        provideFormatter = true
+    },
+    single_file_support = true,
+    root_dir = function() return vim.loop.cwd() end
+}
+require('lspconfig')['cssls'].setup{
+    --autostart = true,
+    on_attach = on_attach,
+    flags = lsp_flags,
+    filetypes = { "css", "scss", "less" },
+    settings = {
+        css = {
+            validate = true
+        },
+        less = {
+            validate = true
+        },
+        scss = {
+            validate = true
+        }
+    },
+    root_dir = function() return vim.loop.cwd() end
+}
+
+require('lspconfig')['sumneko_lua'].setup{
+    --on_attach = on_attach,
+    flags = lsp_flags,
+    root_dir = function() return vim.loop.cwd() end,
+    filetypes = { "lua" },
+    settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }
 
 -- Add additional capabilities supported by nvim-cmp
@@ -62,7 +123,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'vimls', 'html', 'cssls', 'sumneko_lua' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
@@ -75,6 +136,9 @@ local luasnip = require 'luasnip'
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
+local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
+
 cmp.setup {
   snippet = {
     expand = function(args)
