@@ -37,6 +37,7 @@ source ~/.config/nvim/luasnip.lua
 ""source ~/.config/nvim/netrw.vim
 source ~/.config/nvim/neotree.lua
 source ~/.config/nvim/codiconf.vim
+source ~/.config/nvim/tree-sitter.lua
 source ~/.config/nvim/autopairs.lua
 
 colorscheme github_dark_colorblind

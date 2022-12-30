@@ -1,3 +1,4 @@
+-- Este archivo recoge la configuración de los LSP (Protocolos de Servidores de Lenguaje) y autocompletado.
 local lspkind = require('lspkind')
 
 -- Mappings.
@@ -39,24 +40,31 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 require('lspconfig')['pyright'].setup{
-    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
+    filetypes = { "python" },
+    cmd = { "pyright-langserver", "--stdio"},
+    settings = {
+        python = {
+            analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "workspace",
+            useLibraryCodeForTypes = true
+    }
+  }
+    }
 }
 require('lspconfig')['vimls'].setup{
-    --autostart = true,
     on_attach = on_attach,
-    flags = lsp_flags,
+    flags = lsp_flags
 }
 require('lspconfig')['tsserver'].setup{
-    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     root_dir = function() return vim.loop.cwd() end
 }
 require('lspconfig')['html'].setup{
-    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "html" },
@@ -64,15 +72,15 @@ require('lspconfig')['html'].setup{
         configurationSection = { "html", "css", "javascript" },
         embeddedLanguages = {
             css = true,
-        javascript = true
+            javascript = true
         },
         provideFormatter = true
     },
     single_file_support = true,
     root_dir = function() return vim.loop.cwd() end
 }
+require('lspconfig')['tailwindcss'].setup{}
 require('lspconfig')['cssls'].setup{
-    --autostart = true,
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "css", "scss", "less" },
@@ -91,7 +99,7 @@ require('lspconfig')['cssls'].setup{
 }
 
 require('lspconfig')['sumneko_lua'].setup{
-    --on_attach = on_attach,
+    on_attach = on_attach,
     flags = lsp_flags,
     root_dir = function() return vim.loop.cwd() end,
     filetypes = { "lua" },
@@ -123,10 +131,10 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'rust_analyzer', 'pyright', 'tsserver', 'vimls', 'html', 'cssls', 'sumneko_lua' }
+local servers = { 'pyright', 'tsserver', 'vimls', 'html', 'cssls', 'sumneko_lua' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
+    -- on_attach = my_custom_on_attach,bre/Cierra el NeoTree poniendo el foco en el mismo.
     capabilities = capabilities,
   }
 end

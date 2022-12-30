@@ -24,6 +24,7 @@ call plug#begin()
     ""Telescope
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-file-browser.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make'}
 
     ""Codi - Depurador interactivo
     Plug 'metakirby5/codi.vim'
@@ -44,6 +45,7 @@ call plug#begin()
 
     ""Auto cerramiento
     Plug 'nvim-treesitter/nvim-treesitter'
+
     Plug 'windwp/nvim-autopairs'
     Plug 'windwp/nvim-ts-autotag'
 call plug#end()
