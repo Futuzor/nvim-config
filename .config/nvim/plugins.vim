@@ -45,7 +45,6 @@ call plug#begin()
 
     ""Auto cerramiento
     Plug 'nvim-treesitter/nvim-treesitter'
-
     Plug 'windwp/nvim-autopairs'
     Plug 'windwp/nvim-ts-autotag'
 call plug#end()

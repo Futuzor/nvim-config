@@ -1,11 +1,10 @@
-require("nvim-treesitter.configs").setup {
-    highlight = {
-      enable = true,
-        additional_vim_regex_highlighting = false,
-      module_path = "nvim-treesitter.highlight"
-    },
-    indent = {
-        enable = true,
-        module_path = "nvim-treesitter.indent" 
-    }
+local configs = require'nvim-treesitter.configs'
+configs.setup {
+ensure_installed = "lua", "vim", -- Only use parsers that are maintained
+highlight = { -- enable highlighting
+  enable = true, 
+},
+indent = {
+  enable = true, -- default is disabled anyways
+}
 }

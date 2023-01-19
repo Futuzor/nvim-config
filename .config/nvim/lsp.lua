@@ -1,5 +1,6 @@
 -- Este archivo recoge la configuración de los LSP (Protocolos de Servidores de Lenguaje) y autocompletado.
 local lspkind = require('lspkind')
+local runtime_path = vim.split(package.path, ";")
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -80,6 +81,11 @@ require('lspconfig')['html'].setup{
     root_dir = function() return vim.loop.cwd() end
 }
 require('lspconfig')['tailwindcss'].setup{}
+require('lspconfig')['vimls'].setup{
+    cmd = { "vim-language-server", "--stdio" },
+    filetypes = { "vim" },
+    single_file_support = true
+}
 require('lspconfig')['cssls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
@@ -108,6 +114,7 @@ require('lspconfig')['sumneko_lua'].setup{
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
+        path = runtime_path
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
