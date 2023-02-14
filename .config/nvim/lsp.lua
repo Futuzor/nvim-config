@@ -104,7 +104,7 @@ require('lspconfig')['cssls'].setup{
     root_dir = function() return vim.loop.cwd() end
 }
 
-require('lspconfig')['sumneko_lua'].setup{
+require('lspconfig')['lua_ls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
     root_dir = function() return vim.loop.cwd() end,
@@ -138,7 +138,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local lspconfig = require('lspconfig')
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'pyright', 'tsserver', 'vimls', 'html', 'cssls', 'sumneko_lua' }
+local servers = { 'pyright', 'tsserver', 'vimls', 'html', 'cssls', 'lua_ls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,bre/Cierra el NeoTree poniendo el foco en el mismo.
