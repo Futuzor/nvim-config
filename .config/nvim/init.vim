@@ -31,6 +31,9 @@ source ~/.config/nvim/neotree.lua
 source ~/.config/nvim/codiconf.vim
 source ~/.config/nvim/tree-sitter.lua
 source ~/.config/nvim/autopairs.lua
+source ~/.config/nvim/null-ls.lua
+source ~/.config/nvim/prettier.lua
+
 
 colorscheme github_dark_colorblind
 set completeopt = "menu, menuone, noselect"

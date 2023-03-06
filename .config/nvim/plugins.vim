@@ -42,6 +42,7 @@ call plug#begin()
 
     ""Formateador
     Plug 'MunifTanjim/prettier.nvim'
+    Plug 'jose-elias-alvarez/null-ls.nvim'
 
     ""Auto cerramiento
     Plug 'nvim-treesitter/nvim-treesitter'
