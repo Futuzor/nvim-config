@@ -3,19 +3,18 @@
 
 ""Se asigna la tecla 'líder' a la coma (,)
 let mapleader=','
-nmap <leader> :!echo "Acabas de pulsar la tecla LÍDER"<CR>
 
 ""Guarda el archivo actual
-nmap <silent> <C-s> :w<CR>
+nmap <silent> <c-s> :w<CR>
 
 ""Recarga el archivo actual
-nmap <silent> <C-r> :source %<CR>
+nmap <silent> <c-r> :source %<CR>
 
 ""Cierra el archivo/búfer
-nmap <silent> <C-x> :x<CR>
+nmap <silent> <c-x> :x<CR>
 
 ""Selecciona todo el texto del archivo
-nmap <silent> <C-a> gg<S-v>G<CR>
+nmap <silent> <c-a> gg<S-v>G<CR>
 
 ""Copia la línea actual
 nmap <silent> yl v$y<CR>
@@ -51,6 +50,9 @@ nmap <silent> <leader>pi :PlugInstall<CR>
 ""Muestra el estado de los plugins instalados.
 nmap <silent> <leader>ps :PlugStatus<CR>
 
+""Actualiza los plugins de Neovim.
+nmap <silent> <leader>pu :PlugUpdate<CR>
+
 ""-------------
 ""  TELESCOPE
 ""-------------
@@ -65,3 +67,6 @@ nmap <silent> <leader>fh :Telescope help_tags<CR>
 
 ""Activa el plugin Codi en el búfer actual
 nmap <silent> <leader>cc :Codi!!<CR>
+
+""Which Key
+nmap <silent> <leader>w :WhichKey<CR>

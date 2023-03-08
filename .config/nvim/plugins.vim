@@ -48,4 +48,7 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'windwp/nvim-autopairs'
     Plug 'windwp/nvim-ts-autotag'
+
+    ""Which Key
+    Plug 'folke/which-key.nvim'
 call plug#end()
