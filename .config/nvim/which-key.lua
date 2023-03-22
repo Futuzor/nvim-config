@@ -13,4 +13,7 @@ wk.register({
         name = "Recarga el archivo actual",
         ["<c-r>"] = {":source %"},
     },
+["<leader>F"] = {
+        name = "Formatear documento"
+    },
 })

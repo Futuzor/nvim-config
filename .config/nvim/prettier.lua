@@ -1,7 +1,7 @@
 local prettier = require("prettier")
 
 prettier.setup({
-  bin = 'prettier', -- or `'prettierd'` (v0.22+)
+  bin = 'prettierd', -- or `'prettierd'` (v0.22+)
   filetypes = {
     "css",
     "graphql",
@@ -10,6 +10,7 @@ prettier.setup({
     "javascriptreact",
     "json",
     "less",
+    "lua",
     "markdown",
     "scss",
     "typescript",
@@ -27,7 +28,7 @@ prettier.setup({
       -- return false to skip running prettier
       return true
     end,
-    timeout = 5000,
+    timeout = 1000,
   },
   cli_options = {
     arrow_parens = "always",
@@ -46,7 +47,7 @@ prettier.setup({
     single_quote = false,
     tab_width = 2,
     trailing_comma = "es5",
-    use_tabs = false,
+    use_tabs = true,
     vue_indent_script_and_style = false,
   }
 })
