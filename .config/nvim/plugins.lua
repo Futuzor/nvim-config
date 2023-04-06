@@ -2,8 +2,12 @@
 require("lazy").setup({
 
     --Airline
-    "vim-airline/vim-airline",
-    "vim-airline/vim-airline-themes",
+    --"vim-airline/vim-airline",
+    --"vim-airline/vim-airline-themes",
+    
+    --Lualine & Lua Taline
+    "nvim-lualine/lualine.nvim",
+    "kdheepak/tabline.nvim",
 
     --LSPs
     "onsails/lspkind-nvim",
@@ -24,22 +28,21 @@ require("lazy").setup({
     "honza/vim-snippets",
     
     --Telescope
-    "nvim-telescope/telescope.nvim",
-    "nvim-telescope/telescope-file-browser.nvim",
+    {"nvim-telescope/telescope.nvim", event="VeryLazy"},
+    {"nvim-telescope/telescope-file-browser.nvim", event="VeryLazy"},
     --{"nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 
     --Codi - Depurador interactivo
-    "metakirby5/codi.vim",
+    {"metakirby5/codi.vim", event = "VeryLazy"},
 
     --Iconos DEV
-    "kyazdani42/nvim-web-devicons",
-    "ryanoasis/vim-devicons",
+    {"kyazdani42/nvim-web-devicons", event = "VeryLazy"},
+    {"ryanoasis/vim-devicons", event = "VeryLazy"},
 
     --Temas
     "projekt0n/github-nvim-theme",
 
     --Gestor de archivos
-    "MunifTanjim/nui.nvim",
     "nvim-neo-tree/neo-tree.nvim",
 
     --Formateador
@@ -53,7 +56,7 @@ require("lazy").setup({
     "windwp/nvim-ts-autotag",
 
     -- Which Key
-    "folke/which-key.nvim",
+    {"folke/which-key.nvim", event = "VeryLazy"},
 
     -- Noice, Nui y Notify
     "folke/noice.nvim",

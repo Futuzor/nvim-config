@@ -7,3 +7,4 @@ let g:airline#extensions#capslock#symbol = "MAYÚS"
 let g:airline#extensions#fzf#enabled = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 let g:airline_detect_spell = 0
+let g:airline_highlighting_cache = 1

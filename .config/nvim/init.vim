@@ -24,7 +24,8 @@ source ~/.config/nvim/lazy.lua "Carga el archivo lazy.lua
 source ~/.config/nvim/plugins.lua "Carga el archivo plugins.lua
 source ~/.config/nvim/keys.vim "Carga el archivo keys.vim
 source ~/.config/nvim/lsp.lua
-source ~/.config/nvim/airline.vim
+source ~/.config/nvim/lualine.lua
+source ~/.config/nvim/tabline.lua
 source ~/.config/nvim/telescope.lua
 source ~/.config/nvim/mason.lua
 source ~/.config/nvim/luasnip.lua
@@ -38,7 +39,7 @@ source ~/.config/nvim/null-ls.lua
 source ~/.config/nvim/prettier.lua
 source ~/.config/nvim/which-key.lua
 
-colorscheme github_dark_colorblind
+colorscheme github_dark_default
 set completeopt = "menu, menuone, noselect"
 
 ""Proveedores
