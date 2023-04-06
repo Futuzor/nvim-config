@@ -19,6 +19,9 @@ nmap <silent> <c-a> gg<S-v>G<CR>
 ""Copia la línea actual
 nmap <silent> yl v$y<CR>
 
+""Duplica la línea actual
+nmap <silent> <c-l> VyP<CR>
+
 ""------------
 ""  BÚFFERS
 ""------------
@@ -44,14 +47,8 @@ nmap <silent> <Tab> :NeoTreeFocusToggle<CR>
 ""  PLUGINS
 ""-----------
 
-""Instala los plugins que hay listados en la config del vim-plug
-nmap <silent> <leader>pi :PlugInstall<CR>
-
-""Muestra el estado de los plugins instalados.
-nmap <silent> <leader>ps :PlugStatus<CR>
-
-""Actualiza los plugins de Neovim.
-nmap <silent> <leader>pu :PlugUpdate<CR>
+""Carga el gestor de plugins Lazy
+nmap <silent> <leader>l :Lazy<CR>
 
 ""-------------
 ""  TELESCOPE
