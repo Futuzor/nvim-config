@@ -5,7 +5,7 @@ Mi configuración de Neovim
 Cuando se clone este repositorio, hay que hacerlo en la raíz del directorio de usuario, o sea en **/home/[nombre-de-usuario]**.
 
 ## Instalación de plugins
-En el archivo **plugins.vim** hay una lista de plugins ordenada por categoría. Para instarlos hay que utilizar el comando **:PlugInstall**. Pero antes de instalar los plugins, **hay que tener instalado previamente el paquete 'git'**, porque lo que hace es clonar los repositorios de los plugins en la carpeta **/home/[usuario]/.local/share/nvim/site/plugged**.
+La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones.
 
 ## ¿Qué hay de interesante en esta config?
 Esta configuración está pensada para usar el **autocompletado** en diversos lenguajes de programación, así como **snippets** (fragmentos de código) y los **protocolos de servidores de lenguaje**. Esto último permite mejorar la experiencia del desarrollador, mostrando las sintaxis y las definiciones de cada lenguaje de programación.
@@ -16,7 +16,9 @@ Esta configuración está pensada para usar el **autocompletado** en diversos le
 + Recargar el archivo/búfer: <kbd>Ctrl</kbd> + <kbd>r</kbd>
 + Seleccionar todo: <kbd>Ctrl</kbd> + <kbd>a</kbd>
 + Copiar la línea actual: <kbd>yl</kbd>
++ Duplicar la línea actual: <kbd>Ctrl + l</kbd>
 + Cerrar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>x</kbd>
++ Gestor Lazy: <kbd><Leader>l</kbd>
 
 ### *** Actualización 6/4/2023 ***
 He cambiado el gestor de paquetes VimPlug por Lazy, para tratar de mejorar el tiempo de carga de NeoVim. Además se han añadido los plugins **Noice, Nui y Notify** para tener una interfaz más intuitiva.
