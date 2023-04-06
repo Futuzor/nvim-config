@@ -18,7 +18,7 @@ Esta configuración está pensada para usar el **autocompletado** en diversos le
 + Copiar la línea actual: <kbd>yl</kbd>
 + Duplicar la línea actual: <kbd>Ctrl + l</kbd>
 + Cerrar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>x</kbd>
-+ Gestor Lazy: <kbd><Leader> l</kbd>
++ Gestor Lazy: <kbd>"<Leader> l"</kbd>
 
 ### *** Actualización 6/4/2023 ***
 He cambiado el gestor de paquetes VimPlug por Lazy, para tratar de mejorar el tiempo de carga de NeoVim. Además se han añadido los plugins **Noice, Nui y Notify** para tener una interfaz más intuitiva.
