@@ -50,6 +50,9 @@ nmap <silent> <Tab> :NeoTreeFocusToggle<CR>
 ""Carga el gestor de plugins Lazy
 nmap <silent> <leader>l :Lazy<CR>
 
+""Carga el gestor de LSP Mason
+nmap <silent> <leader>m :Mason<CR>
+
 ""-------------
 ""  TELESCOPE
 ""-------------
@@ -67,3 +70,5 @@ nmap <silent> <leader>cc :Codi!!<CR>
 
 ""Which Key
 nmap <silent> <leader>w :WhichKey<CR>
+
+nmap <silent> <leader>5 :colorscheme github_dark_default<CR>

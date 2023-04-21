@@ -39,7 +39,7 @@ source ~/.config/nvim/null-ls.lua
 source ~/.config/nvim/prettier.lua
 source ~/.config/nvim/which-key.lua
 
-colorscheme github_dark_default
+colorscheme github_dark_colorblind
 set completeopt = "menu, menuone, noselect"
 
 ""Proveedores

@@ -1,11 +1,13 @@
-local configs = require'nvim-treesitter.configs'
-
-configs.setup {
-    ensure_installed = "lua", "vim", "javascript", "json", "css", "html", "python",  -- Only use parsers that are maintained
-    highlight = { -- enable highlighting
-        enable = true, 
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {"lua", "vim", "javascript", "json", "css", "html", "python", "typescript"},  -- Only use parsers that are maintained
+    auto_install = true,
+    autotag = {
+        enable = true,
+        filetype = { "html", "xml", "javascript", "typescript"},
     },
-
+    highlight = { -- enable highlighting
+        enable = true,
+    },
     indent = {
         enable = true, -- default is disabled anyways
     },
