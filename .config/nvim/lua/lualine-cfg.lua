@@ -21,8 +21,8 @@
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {'filename'},
-        lualine_x = {'filetype', 'encoding'},
-        lualine_y = {},
+        lualine_x = {'nvim_lsp'},
+        lualine_y = {'filetype', 'encoding'},
         lualine_z = {'location'}
       },
       inactive_sections = {
