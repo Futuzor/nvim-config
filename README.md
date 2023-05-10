@@ -21,14 +21,35 @@ Esta configuración está pensada para usar el **autocompletado** en diversos le
 La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones. En dicho archivo se pueden añadir, modificar y borrar plugins
 
 ## 🔌Plugins <a name="plugins"/>
+
 + **Barras de estado y pestañas**
   + Lua Tabline
 + **Tema de color**
   + Github Nvim Theme (establecido en **"dark_default_high_contrast"**)
 + **Gestor de archivos / Navegación**
   + Neo Tree
++ **Líneas de indentado**
+  + Indent Blankline
++ **Autocompletado**
+  + CMP-Buffer y "nvim-cmp"
++ **Snippets**
+  + LuaSnip, cmp_luanip y "friendly_snippets"
++ **LSP (Protocolos de servidor de lenguaje)**
+  + **Mason** (para gestionar los LSP, linters y formateadores)
+  + **LspKind** (para añadir pictogramas del estilo de **VS Code**)
+  + **LSPConfig**
++ **Autocerramiento** (para cerrar etiquetas y símbolos)
+  + nvim-autopairs
+  + nvim-ts-autotag
++ **Atajos de teclado**
+  + Which Key
++ **Mejoras en la IU**
+  + Noice
+  + Nui
+  + nvim-notifiy (para añadir notificaciones)
 
 ## ⌨️ Teclas <a name="teclas"/>
+
 + **Tecla líder**: <kbd>,</kbd>
 + Guardar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>s</kbd>
 + Recargar el archivo/búfer: <kbd>Ctrl</kbd> + <kbd>r</kbd>
