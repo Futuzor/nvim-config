@@ -56,6 +56,8 @@ La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** i
 + Seleccionar todo: <kbd>Ctrl</kbd> + <kbd>a</kbd>
 + Copiar la línea actual: <kbd>yl</kbd>
 + Duplicar la línea actual: <kbd>Ctrl + l</kbd>
++ Mover línea arriba: <kbd>Alt + Arriba</kbd>
++ Mover línea abajo: <kbd>Alt + Abajo</kbd>
 + Cerrar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>x</kbd>
 + Gestor Lazy: <kbd>"<Leader> l"</kbd>
 
