@@ -22,7 +22,7 @@ La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** i
 
 ## 🔌Plugins <a name="plugins"/>
 
-+ **Barras de estado y pestañas**
+▶️ **Barras de estado y pestañas**
   + Lua Tabline
 + **Tema de color**
   + Github Nvim Theme (establecido en **"dark_default_high_contrast"**)
