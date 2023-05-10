@@ -50,16 +50,16 @@ La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** i
 
 ## ⌨️ Teclas <a name="teclas"/>
 
-+ **Tecla líder**: <kbd>,</kbd>
-+ Guardar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>s</kbd>
-+ Recargar el archivo/búfer: <kbd>Ctrl</kbd> + <kbd>r</kbd>
-+ Seleccionar todo: <kbd>Ctrl</kbd> + <kbd>a</kbd>
-+ Copiar la línea actual: <kbd>yl</kbd>
-+ Duplicar la línea actual: <kbd>Ctrl + l</kbd>
-+ Mover línea arriba: <kbd>Alt + Arriba</kbd>
-+ Mover línea abajo: <kbd>Alt + Abajo</kbd>
-+ Cerrar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>x</kbd>
-+ Gestor Lazy: <kbd>"<Leader> l"</kbd>
++ **Tecla líder**: <code>,</code>
++ Guardar archivo/búfer: <code>Ctrl</code> + <code>s</code>
++ Recargar el archivo/búfer: <code>Ctrl</code> + <code>r</code>
++ Seleccionar todo: <code>Ctrl</code> + <code>a</code>
++ Copiar la línea actual: <code>yl</code>
++ Duplicar la línea actual: <code>Ctrl + l</code>
++ Mover línea arriba: <code>Alt + Arriba</code>
++ Mover línea abajo: <code>Alt + Abajo</code>
++ Cerrar archivo/búfer: <code>Ctrl</code> + <code>x</code>
++ Gestor Lazy: <code>"<Leader> l"</code>
 
 ### *** Actualización 6/4/2023 ***
 
