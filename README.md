@@ -5,6 +5,7 @@
 + [Uso](#uso)
 + [¿Qué hay de interesante en esta config?](#que-hay)
 + [Instalación de plugins](#instalacion-plugins)
++ [Plugins](#plugins)
 + [Teclas](#teclas)
 
 ## Uso <a name="uso"/>
@@ -15,11 +16,25 @@ Cuando se clone este repositorio, hay que hacerlo en la raíz del directorio de 
 
 Esta configuración está pensada para usar el **autocompletado** en diversos lenguajes de programación, así como **snippets** (fragmentos de código) y los **protocolos de servidores de lenguaje**. Esto último permite mejorar la experiencia del desarrollador, mostrando las sintaxis y las definiciones de cada lenguaje de programación.
 
-## Instalación de plugins <a name="instalacion-plugins"/>
+## 📦Instalación de plugins <a name="instalacion-plugins"/>
 
 La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones. En dicho archivo se pueden añadir, modificar y borrar plugins
 
-## Teclas <a name="teclas"/>
+## 🔌Plugins <a name="plugins"/>
+
++ **Barras de estado y pestañas**
+  
+  + Lua Tabline
+
++ **Tema de color**
+  
+  + Github Nvim Theme (establecido en **"dark_default_high_contrast"**)
+
++ **Gestor de archivos / Navegación**
+  
+  + Neo Tree
+
+## ⌨️ Teclas <a name="teclas"/>
 
 + **Tecla líder**: <kbd>,</kbd>
 + Guardar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>s</kbd>
