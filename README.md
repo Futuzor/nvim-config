@@ -21,21 +21,14 @@ Esta configuración está pensada para usar el **autocompletado** en diversos le
 La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones. En dicho archivo se pueden añadir, modificar y borrar plugins
 
 ## 🔌Plugins <a name="plugins"/>
-
 + **Barras de estado y pestañas**
-  
   + Lua Tabline
-
 + **Tema de color**
-  
   + Github Nvim Theme (establecido en **"dark_default_high_contrast"**)
-
 + **Gestor de archivos / Navegación**
-  
   + Neo Tree
 
 ## ⌨️ Teclas <a name="teclas"/>
-
 + **Tecla líder**: <kbd>,</kbd>
 + Guardar archivo/búfer: <kbd>Ctrl</kbd> + <kbd>s</kbd>
 + Recargar el archivo/búfer: <kbd>Ctrl</kbd> + <kbd>r</kbd>
