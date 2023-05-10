@@ -7,3 +7,8 @@ require("mason").setup({
         }
     }
 })
+
+require("mason-lspconfig").setup({
+    ensure_installed = {"tsserver", "cssls", "html", "jsonls", "pyright", "lua_ls"},
+    automatic_installation = true
+})

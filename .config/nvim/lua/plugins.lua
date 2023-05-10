@@ -1,59 +1,53 @@
 -- Aquí se añaden los diferentes plugins.
 return {
 
-	--Lualine & Lua Taline
-	"nvim-lualine/lualine.nvim",
-	"kdheepak/tabline.nvim",
+	--Lualine & Lua Tabline
+	{ "nvim-lualine/lualine.nvim", event = "VeryLazy", dependencies = "kyazdani42/nvim-web-devicons" },
+	{ "kdheepak/tabline.nvim", event = "VeryLazy" },
 
 	--LSPs
-	"onsails/lspkind-nvim",
-	"hrsh7th/cmp-nvim-lsp",
-	"neovim/nvim-lspconfig",
-	"nvim-lua/plenary.nvim",
-	{ "williamboman/mason.nvim", lazy = true },
-	{ "williamboman/mason-lspconfig.nvim", lazy = true },
+	{ "onsails/lspkind-nvim", event = "VeryLazy" },
+	{ "hrsh7th/cmp-nvim-lsp", event = "VeryLazy" },
+	{ "neovim/nvim-lspconfig", event = "VeryLazy" },
+	{ "williamboman/mason.nvim", event = "VeryLazy" },
+	{ "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
 
 	--Autocompletado
-	"hrsh7th/cmp-buffer",
-	"hrsh7th/nvim-cmp",
+	{ "hrsh7th/cmp-buffer", event = "VeryLazy" },
+	{ "hrsh7th/nvim-cmp", event = "VeryLazy" },
 
 	--Snippets
-	{ "L3MON4D3/LuaSnip", lazy = true },
-	"saadparwaiz1/cmp_luasnip",
+	{ "L3MON4D3/LuaSnip", event = "VeryLazy" },
+	{ "saadparwaiz1/cmp_luasnip", event = "VeryLazy" },
 	"rafamadriz/friendly-snippets",
-	"honza/vim-snippets",
 
 	--Telescope
-	{ "nvim-telescope/telescope.nvim", lazy = true },
-	{ "nvim-telescope/telescope-file-browser.nvim", lazy = true },
+	--{ "nvim-telescope/telescope.nvim", event = "VeryLazy" },
+	--{ "nvim-telescope/telescope-file-browser.nvim", event = "VeryLazy" },
 	--{"nvim-telescope/telescope-fzf-native.nvim", run = "make" },
 
 	--Codi - Depurador interactivo
 	{ "metakirby5/codi.vim", event = "VeryLazy" },
-
-	--Iconos DEV
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
-	{ "ryanoasis/vim-devicons", lazy = true },
 
 	--Temas
 	"projekt0n/github-nvim-theme",
 	--"GustavoPrietoP/doom-themes.nvim",
 
 	--Gestor de archivos
-	{ "nvim-neo-tree/neo-tree.nvim", lazy = true },
+	{ "nvim-neo-tree/neo-tree.nvim", event = "VeryLazy", dependencies = "nvim-lua/plenary.nvim" },
 
 	--Formateador
-	"MunifTanjim/prettier.nvim",
+	{ "MunifTanjim/prettier.nvim", event = "VeryLazy" },
 	"fsouza/prettierd",
-	"jose-elias-alvarez/null-ls.nvim",
+	{ "jose-elias-alvarez/null-ls.nvim", event = "VeryLazy" },
 
 	--Auto cerramiento
-	{ "nvim-treesitter/nvim-treesitter", lazy = true },
-	{ "windwp/nvim-autopairs", lazy = true },
-	{ "windwp/nvim-ts-autotag", lazy = true },
+	{ "nvim-treesitter/nvim-treesitter", event = "VeryLazy" },
+	{ "windwp/nvim-autopairs", event = "VeryLazy" },
+	{ "windwp/nvim-ts-autotag", event = "VeryLazy" },
 
 	-- Which Key
-	{ "folke/which-key.nvim", lazy = true },
+	{ "folke/which-key.nvim", event = "VeryLazy" },
 
 	-- Noice, Nui y Notify
 	"folke/noice.nvim",
@@ -61,8 +55,8 @@ return {
 	"rcarriga/nvim-notify",
 
 	-- Indent lines
-	"lukas-reineke/indent-blankline.nvim",
+	{ "lukas-reineke/indent-blankline.nvim", event = "VeryLazy" },
 
-    -- Multi cursores
-    --"mg979/vim-visual-multi",
+	-- Multi cursores
+	--"mg979/vim-visual-multi",
 }
