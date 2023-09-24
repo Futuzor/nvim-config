@@ -8,6 +8,8 @@ require("github-theme").setup({
 			functions = "bold",
 			keywords = "bold",
 			variables = "NONE",
+            operators = "NONE",
+            types = "bold"
 		},
 		darken = {
 			floats = true,

@@ -13,6 +13,9 @@ map("n", "<c-r>", ":source %<cr>", { silent = true, desc = "Recargar archivo act
 --Cierra el archivo/búfer
 map("n", "<c-x>", ":bdelete<cr>", { silent = true, desc = "Cerrar el archivo/búfer actual" })
 
+-- Salir de Neovim
+map("n", "<c-q>", ":q!<cr>", { silent = true, desc = "Salir de Neovim" })
+
 --Selecciona todo el texto del archivo
 map("n", "<c-a>", "ggVG<cr>", { silent = true, desc = "Seleccionar todo" })
 

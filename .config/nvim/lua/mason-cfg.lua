@@ -1,14 +1,14 @@
 require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"tsserver", "cssls", "html", "jsonls", "pyright", "lua_ls"},
-    automatic_installation = true
+	ensure_installed = { "tsserver", "cssls", "html", "jsonls", "pyright", "lua_ls" },
+	automatic_installation = true,
 })

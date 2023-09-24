@@ -1,14 +1,13 @@
-# nvim-config
-Mi configuración de Neovim
+# Mi configuración de Neovim
 
 ## Uso
 Cuando se clone este repositorio, hay que hacerlo en la raíz del directorio de usuario, o sea en **/home/[nombre-de-usuario]**.
 
-## Instalación de plugins
-La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones.
-
 ## ¿Qué hay de interesante en esta config?
 Esta configuración está pensada para usar el **autocompletado** en diversos lenguajes de programación, así como **snippets** (fragmentos de código) y los **protocolos de servidores de lenguaje**. Esto último permite mejorar la experiencia del desarrollador, mostrando las sintaxis y las definiciones de cada lenguaje de programación.
+
+## Instalación de plugins
+La primera vez que se inicia la configuración, el gestor de paquetes **Lazy** instalará automáticamente (o clonará usando **git**) todos los plugins que se mencionan en el archivo **plugins.lua** con sus respectivas configuraciones.
 
 ## Teclas
 + **Tecla líder**: <kbd>,</kbd>
