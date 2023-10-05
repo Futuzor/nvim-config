@@ -5,11 +5,13 @@ require("github-theme").setup({
 		hide_nc_statusline = true,
 		styles = {
 			comments = "italic,bold",
+            constants = "bold",
 			functions = "bold",
 			keywords = "bold",
+            strings = "bold",
 			variables = "NONE",
             operators = "NONE",
-            types = "bold"
+            types = "NONE"
 		},
 		darken = {
 			floats = true,
@@ -21,4 +23,4 @@ require("github-theme").setup({
 	},
 })
 
-vim.cmd("colorscheme github_dark_high_contrast")
+vim.cmd("colorscheme github_dark")

@@ -23,7 +23,7 @@ return {
     {"rafamadriz/friendly-snippets" },
 
 	--Codi - Depurador interactivo
-	{ "metakirby5/codi.vim" },
+	--{ "metakirby5/codi.vim" },
 
 	--Temas
 	"projekt0n/github-nvim-theme",
@@ -51,6 +51,6 @@ return {
 	-- Indent lines
 	{ "lukas-reineke/indent-blankline.nvim", lazy = true },
 
-	-- Multi cursores
+    -- Multi cursores
 	--"mg979/vim-visual-multi",
 }
