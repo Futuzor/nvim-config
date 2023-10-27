@@ -9,7 +9,8 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		--Formateador del Prettier
-		formatting.prettier_d_slim.with({ extra_args = { "--no-semi", "--double-quotes" } }),
+		--formatting.prettier_d_slim.with({ extra_args = { "--no-semi", "--double-quotes" } }),
+		formatting.prettierd.with({ extra_args = { "--no-semi", "--double-quotes" } }),
 
 		--Formateador para Lua
 		formatting.stylua,
@@ -32,7 +33,8 @@ null_ls.setup({
 		--Linter para Python
 		diagnostics.pylint,
 
-		diagnostics.stylelint,
+		--Linter para CSS
+        diagnostics.stylelint,
 
 		actions.eslint_d,
 		actions.refactoring,

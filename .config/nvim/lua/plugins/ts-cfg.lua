@@ -3,7 +3,7 @@ require("nvim-treesitter.configs").setup({
 	auto_install = true,
 	autotag = {
 		enable = true,
-		filetype = { "html", "xml", "javascript", "typescript", "css", "json", "python", "astro", "markdown" },
+		filetype = { "html", "xml", "javascript", "typescript", "css", "json", "python", "astro", "markdown", "javascriptreact", "typescriptreact" },
 	},
 	highlight = { -- enable highlighting
 		enable = true,

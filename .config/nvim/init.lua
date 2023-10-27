@@ -22,28 +22,12 @@ vim.opt.textwidth = 85
 vim.opt.conceallevel = 2
 vim.o.completeopt = "menu,menuone,noselect"
 vim.opt.syntax = "on"
+vim.opt.cursorline = true
+vim.cmd('set noswapfile')
 
 --Configs externas
 require("keys")
 require("lazy-cfg")
-require("neotree-cfg")
-require("lualine-cfg")
-require("tabline-cfg")
-require("cmp-cfg")
-require("lsp-cfg")
-require("codiconf")
-require("mason-cfg")
-require("luasnip-cfg")
-require("nls-cfg")
-require("noice-cfg")
-require("notify-cfg")
-require("prettier-cfg")
-require("wk-cfg")
-require("autopairs")
-require("github")
-require("indent-blankline")
-require("ts-cfg")
---require("telescope-cfg")
 
 --Proveedores
 vim.cmd("let g:python3_host_prog = $PYTHONBIN")

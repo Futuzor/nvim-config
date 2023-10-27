@@ -2,10 +2,10 @@ require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		theme = "powerline_dark",
-		component_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
-			statusline = {},
+			statusline = {"neo-tree"},
 			winbar = {},
 		},
 		ignore_focus = {},
@@ -22,8 +22,8 @@ require("lualine").setup({
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = { "filename" },
 		lualine_x = { "fancy_lsp_servers" },
-		lualine_y = { "filetype", "encoding" },
-		lualine_z = { "location" },
+		lualine_y = { "filetype" },
+		lualine_z = { "location", "mason" },
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -33,8 +33,10 @@ require("lualine").setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	tabline = {},
+	tabline = {
+        lualine_a = {"buffers"}
+    },
 	winbar = {},
 	inactive_winbar = {},
-	extensions = {},
+	extensions = {"mason"},
 })

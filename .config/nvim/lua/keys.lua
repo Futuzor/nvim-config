@@ -23,8 +23,10 @@ map("n", "<c-a>", "ggVG<cr>", { silent = true, desc = "Seleccionar todo" })
 map("n", "yl", "v$y<cr>", { silent = true, desc = "Copiar línea actual" })
 
 --Mover línea arriba/abajo
-map("n", "<a-Up>", "ddkP", { silent = true, desc = "Mover línea arriba" })
-map("n", "<a-Down>", "ddjP", { silent = true, desc = "Mover línea abajo" })
+map("n", "<a-Up>", ":MoveLine(-1)<cr>", { silent = true, desc = "Mover línea arriba" })
+map("v", "<a-Up>", ":MoveBlock(-1)<cr>", { silent = true, desc = "Mover línea arriba" })
+map("n", "<a-Down>", ":MoveLine(1)<cr>", { silent = true, desc = "Mover bloque abajo" })
+map("v", "<a-Down>", ":MoveBlock(1)<cr>", { silent = true, desc = "Mover bloque abajo" })
 
 --Duplica la línea actual
 map("n", "<c-l>", "VyP<cr>", { silent = true, desc = "Duplicar línea actual" })
@@ -34,6 +36,7 @@ map("n", "<c-l>", "VyP<cr>", { silent = true, desc = "Duplicar línea actual" })
 --------------
 map("n", "bp", ":bprev<cr>", { silent = true, desc = "Búfer anterior" })
 map("n", "bn", ":bnext<cr>", { silent = true, desc = "Búfer siguiente" })
+map("n", "bd", ":bdelete<cr>", { silent = true, desc = "Borrar búfer" })
 
 --------------
 --  PESTAÑAS
@@ -47,7 +50,7 @@ map("n", "<leader>te", ":tabedit<cr>", { silent = true, desc = "Nueva pestaña" 
 --------------
 
 --Abre/Cierra el NeoTree poniendo el foco en el mismo..
-map("n", "<Tab>", ":NeoTreeFocusToggle<cr>", { silent = true, desc = "NeoTree" })
+map("n", "<Tab>", ":Neotree toggle<cr>", { silent = true, desc = "NeoTree toggle" })
 
 -------------
 --  PLUGINS
@@ -58,6 +61,9 @@ map("n", "<leader>l", ":Lazy<cr>", { silent = true, desc = "Lazy" })
 
 --Carga el gestor de LSP Mason
 map("n", "<leader>m", ":Mason<cr>", { silent = true, desc = "Mason" })
+
+--Abre y cierra Trouble
+map("n", "<leader>t", ":TroubleToggle<cr>,",{silent = true, desc = "Conmutar Trouble"})
 
 ---------------
 --  TELESCOPE
