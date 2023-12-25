@@ -1,0 +1,21 @@
+-- Neotest
+return {
+		"nvim-neotest/neotest",
+        enabled = false,
+		dependencies = { "nvim-neotest/neotest-python" },
+		event = "BufRead",
+		config = function()
+
+require("neotest").setup({
+    adapters = {
+        require("neotest-python")({
+            dap = {justMyCode = false, console = "integratedTerminal",},
+            args = {"--log-level", "DEBUG", "--quiet"},
+            runner = "python-unittest",
+        })
+    }
+})
+
+vim.keymap.set("n", "<leader>nt", ":Neotest<cr>", {silent = true, desc = "Ejecutar Neotest"})
+		end,
+}

@@ -17,15 +17,15 @@ map("n", "<c-x>", ":bdelete<cr>", { silent = true, desc = "Cerrar el archivo/bú
 map("n", "<c-q>", ":q!<cr>", { silent = true, desc = "Salir de Neovim" })
 
 --Selecciona todo el texto del archivo
-map("n", "<c-a>", "ggVG<cr>", { silent = true, desc = "Seleccionar todo" })
+map("n", "<c-a>", "ggVG", { silent = true, desc = "Seleccionar todo" })
 
 --Copia la línea actual
 map("n", "yl", "v$y<cr>", { silent = true, desc = "Copiar línea actual" })
 
 --Mover línea arriba/abajo
 map("n", "<a-Up>", ":MoveLine(-1)<cr>", { silent = true, desc = "Mover línea arriba" })
-map("v", "<a-Up>", ":MoveBlock(-1)<cr>", { silent = true, desc = "Mover línea arriba" })
 map("n", "<a-Down>", ":MoveLine(1)<cr>", { silent = true, desc = "Mover bloque abajo" })
+map("v", "<a-Up>", ":MoveBlock(-1)<cr>", { silent = true, desc = "Mover línea arriba" })
 map("v", "<a-Down>", ":MoveBlock(1)<cr>", { silent = true, desc = "Mover bloque abajo" })
 
 --Duplica la línea actual
@@ -63,15 +63,7 @@ map("n", "<leader>l", ":Lazy<cr>", { silent = true, desc = "Lazy" })
 map("n", "<leader>m", ":Mason<cr>", { silent = true, desc = "Mason" })
 
 --Abre y cierra Trouble
-map("n", "<leader>t", ":TroubleToggle<cr>,",{silent = true, desc = "Conmutar Trouble"})
-
----------------
---  TELESCOPE
----------------
-
-map("n", "<leader>ff", ":Telescope find_files<cr>", { silent = true, desc = "Telescope file finder" })
-map("n", "<leader>fb", ":Telescope file_browser<cr>", { silent = true, desc = "Telescope file browser" })
-map("n", "<leader>fh", ":Telescope help_tags<cr>", { silent = true, desc = "Telescope help tags" })
+--map("n", "<leader>tr", ":TroubleToggle<cr>,",{silent = true, desc = "Conmutar Trouble"})
 
 ----------
 --  CODI
@@ -84,10 +76,11 @@ map("n", "<leader>cc", ":Codi!!<cr>", { silent = true, desc = "Activar el Codi" 
 --  WHICH KEY
 ---------------
 
---Which Key
+-- Which Key
 map("n", "<leader>w", ":WhichKey<cr>", { silent = true, desc = "WhichKey" })
 
---Prettier
+-- Prettier
 map("n", "<leader>f", ":Prettier<cr>", { silent = true, desc = "Prettier" })
 
+-- Formatear documento
 map("n", "<leader>F", ":lua vim.lsp.buf.format()<cr>", { silent = true, desc = "Formatear documento" })

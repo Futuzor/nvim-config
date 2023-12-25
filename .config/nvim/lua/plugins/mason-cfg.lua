@@ -1,14 +1,32 @@
-require("mason").setup({
-	ui = {
-		icons = {
-			package_installed = "✓",
-			package_pending = "➜",
-			package_uninstalled = "✗",
-		},
-	},
-})
+-- Mason
+return {
+    "williamboman/mason.nvim",
+    dependencies = "williamboman/mason-lspconfig.nvim",
+    config = function()
+        require("mason").setup({
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗",
+                },
+            },
+        })
 
-require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "cssls", "html", "jsonls", "pyright", "lua_ls" },
-	automatic_installation = true,
-})
+        require("mason-lspconfig").setup({
+            ensure_installed = {
+                "tsserver",
+                "cssls",
+                "html",
+                "jsonls",
+                "pyright",
+                "lua_ls",
+                "emmet_ls",
+                "prettierd",
+                "eslint_d",
+                "tailwindcss",
+            },
+            automatic_installation = true,
+        })
+    end,
+}

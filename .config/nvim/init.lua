@@ -13,17 +13,17 @@ vim.opt.breakindent = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
---vim.opt.spell = true
---vim.opt.spelllang = { "es" }
 vim.opt.termguicolors = true
+vim.opt.langmenu = "es_ES"
 vim.opt.linebreak = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.textwidth = 85
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 3
 vim.o.completeopt = "menu,menuone,noselect"
 vim.opt.syntax = "on"
 vim.opt.cursorline = true
-vim.cmd('set noswapfile')
+vim.opt.swapfile = false
+vim.opt.backup = false
 
 --Configs externas
 require("keys")

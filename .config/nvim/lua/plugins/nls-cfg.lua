@@ -1,42 +1,51 @@
-local null_ls = require("null-ls")
+-- Null LS (Resaltado de sintaxis)
 
-local diagnostics = null_ls.builtins.diagnostics
-local completion = null_ls.builtins.completion
-local formatting = null_ls.builtins.formatting
-local actions = null_ls.builtins.code_actions
+return {
+    "nvimtools/none-ls.nvim",
+    event = "BufRead",
+    config = function()
+        local null_ls = require("null-ls")
 
-null_ls.setup({
-	debug = false,
-	sources = {
-		--Formateador del Prettier
-		--formatting.prettier_d_slim.with({ extra_args = { "--no-semi", "--double-quotes" } }),
-		formatting.prettierd.with({ extra_args = { "--no-semi", "--double-quotes" } }),
+        local diagnostics = null_ls.builtins.diagnostics
+        local completion = null_ls.builtins.completion
+        local formatting = null_ls.builtins.formatting
+        local actions = null_ls.builtins.code_actions
 
-		--Formateador para Lua
-		formatting.stylua,
+        null_ls.setup({
+            debug = false,
+            sources = {
+                --Formateador del Prettier
+                --formatting.prettier_d_slim.with({ extra_args = { "--no-semi", "--double-quotes" } }),
+                formatting.prettierd.with({ extra_args = { "--no-semi", "--double-quotes" } }),
 
-		--Formateador Markdown
-		formatting.markdown_toc,
+                --Formateador para Lua
+                formatting.stylua,
 
-		--Formateador para Python
-		formatting.black,
+                --Formateador Markdown
+                formatting.markdown_toc,
 
-		--Eslint para JS y TS
-		diagnostics.eslint_d,
+                --Formateador para Python
+                formatting.black,
 
-		--Linter para el JSON
-		diagnostics.jsonlint,
+                --Eslint para JS y TS
+                diagnostics.eslint_d,
 
-		--Linter pra Markdown
-		diagnostics.markdownlint,
+                --Linter para el JSON
+                diagnostics.jsonlint,
 
-		--Linter para Python
-		diagnostics.pylint,
+                --Linter pra Markdown
+                diagnostics.markdownlint,
 
-		--Linter para CSS
-        diagnostics.stylelint,
+                --Linter para Python
+                diagnostics.pylint,
 
-		actions.eslint_d,
-		actions.refactoring,
-	},
-})
+                --Linter para CSS
+                diagnostics.stylelint,
+
+                --Acciones de código
+                actions.eslint_d,
+                actions.refactoring,
+            },
+        })
+    end,
+}
