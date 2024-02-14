@@ -28,33 +28,62 @@ return {
 
         require("dap-python").setup("/usr/bin/python3")
 
-        require("dap-vscode-js").setup({
-            node_path = "~/.bun/bin/bun", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
-            debugger_path = "~/.dap/vscode-js-debug", -- Path to vscode-js-debug installation.
-            --debugger_cmd = { "vsDebugServer" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
-            adapters = { "pwa-node" },
+        --[[require("dap-vscode-js").setup({
+            --node_path = "~/.bun/bin/bun", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
+            --debugger_path = vim.fn.stdpath('data') .. "/lazy/vscode-js-debug", -- Path to vscode-js-debug installation.
+            debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
+              adapters = { "pwa-node" },
             --adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
-        })
+        })]]
+        --
 
-        for _, language in ipairs({ "typescript", "javascript" }) do
+        dap.adapters["pwa-node"] = {
+            type = "server",
+            host = "127.0.0.1",
+            port = 8123,
+        }
+
+        dap.adapters["pwa-chrome"] = {
+            type = "server",
+            host = "127.0.0.1",
+            port = 8124,
+        }
+
+        dap.adapters["pwa-msedge"] = {
+            type = "server",
+            host = "127.0.0.1",
+            port = 8125,
+        }
+
+        for _, language in ipairs({ "typescript", "javascript", "typescriptreact" }) do
             dap.configurations[language] = {
                 {
                     type = "pwa-node",
                     request = "launch",
                     name = "Launch file",
                     program = "${file}",
+                    sourceMaps = true,
                     cwd = vim.fn.getcwd(),
-                    runtimeExecutable = "bun",
-                    runtimeArgs = { "run", "--inspect-brk" },
-                    attachSimplePort = "4200",
+                    runtimeExecutable = "ts-node",
                 },
-                --[[{
-						type = "pwa-node",
-						request = "attach",
-						name = "Attach",
-						processId = require("dap.utils").pick_process,
-						cwd = "${workspaceFolder}",
-					},]]
+                {
+                    type = "pwa-chrome",
+                    request = "launch",
+                    name = "Launch file",
+                    program = "${file}",
+                    sourceMaps = true,
+                    cwd = vim.fn.getcwd(),
+                    runtimeExecutable = "ts-node",
+                },
+                {
+                    type = "pwa-msedge",
+                    request = "launch",
+                    name = "Launch file",
+                    program = "${file}",
+                    sourceMaps = true,
+                    cwd = vim.fn.getcwd(),
+                    runtimeExecutable = "ts-node",
+                },
             }
         end
 

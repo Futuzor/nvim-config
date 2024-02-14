@@ -15,16 +15,16 @@ return {
 
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "tsserver",
+                --"tsserver",
                 "cssls",
                 "html",
                 "jsonls",
                 "pyright",
                 "lua_ls",
                 "emmet_ls",
-                "prettierd",
-                "eslint_d",
-                "tailwindcss",
+                --"prettierd",
+                --"eslint_d",
+                --"tailwindcss",
             },
             automatic_installation = true,
         })

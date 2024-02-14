@@ -17,7 +17,6 @@ vim.opt.termguicolors = true
 vim.opt.langmenu = "es_ES"
 vim.opt.linebreak = true
 vim.opt.wrap = false
-vim.opt.textwidth = 85
 vim.opt.conceallevel = 3
 vim.o.completeopt = "menu,menuone,noselect"
 vim.opt.syntax = "on"
