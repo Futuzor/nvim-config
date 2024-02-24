@@ -26,7 +26,7 @@ return {
             dapui.close()
         end
 
-        require("dap-python").setup("/usr/bin/python3")
+        require("dap-python").setup("~/Documentos/Python/debugpy/bin/python3.12")
 
         --[[require("dap-vscode-js").setup({
             --node_path = "~/.bun/bin/bun", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
@@ -34,33 +34,35 @@ return {
             debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server. Takes precedence over `node_path` and `debugger_path`.
               adapters = { "pwa-node" },
             --adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost" }, -- which adapters to register in nvim-dap
-        })]]
-        --
+        })]]--
 
         dap.adapters["pwa-node"] = {
             type = "server",
-            host = "127.0.0.1",
+            host = "localhost",
             port = 8123,
+            executable = {command = "js-debug-adapter"}
         }
 
-        dap.adapters["pwa-chrome"] = {
+        --[[dap.adapters["pwa-chrome"] = {
             type = "server",
-            host = "127.0.0.1",
+            host = "localhost",
             port = 8124,
+            executable = {command = "js-debug-adapter"}
         }
 
         dap.adapters["pwa-msedge"] = {
             type = "server",
-            host = "127.0.0.1",
+            host = "localhost",
             port = 8125,
-        }
+            executable = {command = "js-debug-adapter"}
+        }]]--
 
         for _, language in ipairs({ "typescript", "javascript", "typescriptreact" }) do
             dap.configurations[language] = {
                 {
                     type = "pwa-node",
                     request = "launch",
-                    name = "Launch file",
+                    name = "Launch file in Node",
                     program = "${file}",
                     sourceMaps = true,
                     cwd = vim.fn.getcwd(),
@@ -69,7 +71,7 @@ return {
                 {
                     type = "pwa-chrome",
                     request = "launch",
-                    name = "Launch file",
+                    name = "Launch file in Chrome",
                     program = "${file}",
                     sourceMaps = true,
                     cwd = vim.fn.getcwd(),
@@ -78,7 +80,7 @@ return {
                 {
                     type = "pwa-msedge",
                     request = "launch",
-                    name = "Launch file",
+                    name = "Launch file in Microsoft Edge",
                     program = "${file}",
                     sourceMaps = true,
                     cwd = vim.fn.getcwd(),
